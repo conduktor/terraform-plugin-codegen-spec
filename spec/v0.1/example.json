@@ -3099,6 +3099,21 @@
             }
           },
           {
+            "name": "single_nested_model_name_override",
+            "single_nested": {
+              "custom_type_name": "custom_model_name",
+              "attributes": [
+                {
+                  "name": "bool_attribute",
+                  "bool": {
+                    "computed_optional_required": "computed"
+                  }
+                }
+              ],
+              "computed_optional_required": "computed"
+            }
+          },
+          {
             "name": "single_nested_single_nested_bool_attribute",
             "single_nested": {
               "attributes": [

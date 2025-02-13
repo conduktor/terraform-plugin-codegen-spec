@@ -73,9 +73,10 @@ func (a Attributes) Validate(ctx context.Context, req AttributeValidateRequest) 
 // be specified.
 type Attribute struct {
 	// Name defines the attribute name.
-	Name string `json:"name"`
+	Name      string `json:"name"`
+	ModelName string `json:"model_name,omitempty"`
 
-	Bool         *BoolAttribute         `json:"bool,omitempty"`
+	Bool         *BoolAttribute         `json:"bool"`
 	Dynamic      *DynamicAttribute      `json:"dynamic,omitempty"`
 	Float64      *Float64Attribute      `json:"float64,omitempty"`
 	Int64        *Int64Attribute        `json:"int64,omitempty"`
@@ -587,6 +588,9 @@ type SingleNestedAttribute struct {
 
 	// AssociatedExternalType defines a type that can be used as a NestedAttributeObject.
 	AssociatedExternalType *schema.AssociatedExternalType `json:"associated_external_type,omitempty"`
+
+	// CustomTypeName name used for Custom type model generation
+	CustomTypeName string `json:"custom_type_name,omitempty"`
 
 	// CustomType defines a custom type and value for the attribute.
 	CustomType *schema.CustomType `json:"custom_type,omitempty"`

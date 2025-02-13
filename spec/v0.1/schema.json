@@ -2993,6 +2993,9 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
+            "custom_type_name": {
+              "$ref": "#/$defs/valid_identifier"
+            },
             "associated_external_type": {
               "$ref": "#/$defs/schema_associated_external_type"
             },

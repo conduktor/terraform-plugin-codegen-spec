@@ -3175,6 +3175,21 @@ func TestSpecification_JSONUnmarshal_Version0_1(t *testing.T) {
 									},
 								},
 								{
+									Name: "single_nested_model_name_override",
+									SingleNested: &resource.SingleNestedAttribute{
+										CustomTypeName: "custom_model_name",
+										Attributes: []resource.Attribute{
+											{
+												Name: "bool_attribute",
+												Bool: &resource.BoolAttribute{
+													ComputedOptionalRequired: schema.Computed,
+												},
+											},
+										},
+										ComputedOptionalRequired: schema.Computed,
+									},
+								},
+								{
 									Name: "single_nested_single_nested_bool_attribute",
 									SingleNested: &resource.SingleNestedAttribute{
 										Attributes: []resource.Attribute{
