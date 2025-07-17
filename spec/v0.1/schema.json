@@ -2555,6 +2555,9 @@
             "custom_type": {
               "$ref": "#/$defs/schema_custom_type"
             },
+            "custom_type_name": {
+              "$ref": "#/$defs/valid_identifier"
+            },
             "default": {
               "$ref": "#/$defs/schema_list_default"
             },
@@ -2700,6 +2703,9 @@
             },
             "custom_type": {
               "$ref": "#/$defs/schema_custom_type"
+            },
+            "custom_type_name": {
+              "$ref": "#/$defs/valid_identifier"
             },
             "default": {
               "$ref": "#/$defs/schema_map_default"
@@ -2905,6 +2911,9 @@
             },
             "custom_type": {
               "$ref": "#/$defs/schema_custom_type"
+            },
+            "custom_type_name": {
+              "$ref": "#/$defs/valid_identifier"
             },
             "default": {
               "$ref": "#/$defs/schema_set_default"

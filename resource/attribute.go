@@ -104,6 +104,9 @@ type NestedAttributeObject struct {
 	// CustomType defines a custom type and value for the NestedAttributeObject.
 	CustomType *schema.CustomType `json:"custom_type,omitempty"`
 
+	// CustomTypeName name used for Custom type model generation
+	CustomTypeName string `json:"custom_type_name,omitempty"`
+
 	// PlanModifiers define types and functions that provide plan modification
 	// functionality for the NestedAttributeObject.
 	PlanModifiers schema.ObjectPlanModifiers `json:"plan_modifiers,omitempty"`
@@ -318,6 +321,9 @@ type ListNestedAttribute struct {
 	// CustomType defines a custom type and value for the attribute.
 	CustomType *schema.CustomType `json:"custom_type,omitempty"`
 
+	// CustomTypeName name used for Custom type model generation
+	CustomTypeName string `json:"custom_type_name,omitempty"`
+
 	// Default defines a default value for the attribute.
 	Default *schema.ListDefault `json:"default,omitempty"`
 
@@ -394,6 +400,9 @@ type MapNestedAttribute struct {
 
 	// CustomType defines a custom type and value for the attribute.
 	CustomType *schema.CustomType `json:"custom_type,omitempty"`
+
+	// CustomTypeName name used for Custom type model generation
+	CustomTypeName string `json:"custom_type_name,omitempty"`
 
 	// Default defines a default value for the attribute.
 	Default *schema.MapDefault `json:"default,omitempty"`
@@ -552,6 +561,9 @@ type SetNestedAttribute struct {
 	// CustomType defines a custom type and value for the attribute.
 	CustomType *schema.CustomType `json:"custom_type,omitempty"`
 
+	// CustomTypeName name used for Custom type model generation
+	CustomTypeName string `json:"custom_type_name,omitempty"`
+
 	// Default defines a default value for the attribute.
 	Default *schema.SetDefault `json:"default,omitempty"`
 
@@ -589,11 +601,11 @@ type SingleNestedAttribute struct {
 	// AssociatedExternalType defines a type that can be used as a NestedAttributeObject.
 	AssociatedExternalType *schema.AssociatedExternalType `json:"associated_external_type,omitempty"`
 
-	// CustomTypeName name used for Custom type model generation
-	CustomTypeName string `json:"custom_type_name,omitempty"`
-
 	// CustomType defines a custom type and value for the attribute.
 	CustomType *schema.CustomType `json:"custom_type,omitempty"`
+
+	// CustomTypeName name used for Custom type model generation
+	CustomTypeName string `json:"custom_type_name,omitempty"`
 
 	// Default defines a default value for the attribute.
 	Default *schema.ObjectDefault `json:"default,omitempty"`
